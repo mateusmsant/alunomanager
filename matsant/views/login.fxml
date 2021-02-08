@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="900.0" maxWidth="1280.0" minHeight="900.0" minWidth="1280.0" prefHeight="900.0" prefWidth="1280.0" stylesheets="@/matsant/res/css/style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="matsant.controllers.Login">
+   <children>
+      <AnchorPane fx:id="pane2" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="pane3" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="pane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane prefHeight="854.0" prefWidth="0.0" />
+      <AnchorPane fx:id="registroPane" prefHeight="800.0" prefWidth="378.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow spread="0.19" />
+         </effect>
+         <children>
+            <JFXTextField fx:id="nomeInput" alignment="CENTER" centerShape="false" focusColor="#ffffff00" labelFloat="true" layoutX="18.0" layoutY="215.0" prefHeight="43.0" prefWidth="163.0" promptText="Nome" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="215.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="botaoCadastro1" buttonType="RAISED" layoutX="15.0" layoutY="646.0" onAction="#voltarTelaLogin" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #ef5350; -fx-background-radius: 5px;" text="Voltar" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="645.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="sobrenomeInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="213.0" layoutY="215.0" prefHeight="43.0" prefWidth="163.0" promptText="Sobrenome" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="215.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="emailInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="20.0" layoutY="285.0" prefHeight="43.0" prefWidth="340.0" promptText="Email" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="285.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="cadastroUserInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="20.0" layoutY="355.0" prefHeight="43.0" prefWidth="340.0" promptText="Usuário" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="355.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="celularInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="20.0" layoutY="425.0" prefHeight="43.0" prefWidth="340.0" promptText="Celular" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="423.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="novaSenhaInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="20.0" layoutY="495.0" prefHeight="43.0" prefWidth="340.0" promptText="Senha" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="488.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="repetirNovaSenhaInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutY="565.0" prefHeight="43.0" prefWidth="340.0" promptText="Repetir a senha" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="562.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fx:id="cadastroImagem" fitHeight="150.0" fitWidth="150.0" layoutX="115.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="28.0" />
+            <JFXButton fx:id="botaoCadastro" buttonType="RAISED" layoutX="166.0" layoutY="650.0" onAction="#botaoCadastroClick" prefHeight="43.0" prefWidth="194.0" style="-fx-background-color: #00BA6B; -fx-background-radius: 5px;" text="Cadastre-se" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="645.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Line fx:id="underlineErro" endX="100.0" layoutX="190.0" layoutY="786.0" startX="-100.0" visible="false" AnchorPane.bottomAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginPane" prefHeight="800.0" prefWidth="378.0" style="-fx-background-color: #fff;" visible="false" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="50.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXTextField fx:id="userInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="47.0" layoutY="420.0" prefHeight="43.0" prefWidth="287.0" promptText="Usuário" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="222.0" layoutY="575.0" onAction="#loginClicked" prefHeight="43.0" prefWidth="107.0" style="-fx-background-color: #29b6f6; -fx-background-radius: 10px;" text="Entrar" textFill="WHITE" wrapText="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="criarButton" buttonType="RAISED" layoutX="47.0" layoutY="575.0" onAction="#mostrarRegistroPane" prefHeight="43.0" prefWidth="107.0" style="-fx-background-color: #00BA6B; -fx-background-radius: 10px;" text="Criar conta" textFill="WHITE" wrapText="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXPasswordField fx:id="passInput" alignment="CENTER" focusColor="#ffffff00" labelFloat="true" layoutX="47.0" layoutY="486.0" prefHeight="43.0" prefWidth="287.0" promptText="Senha" style="-fx-border-color: #e2e2e2; -fx-border-radius: 15px;" stylesheets="@/matsant/res/css/style.css" unFocusColor="#ffffff00">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fx:id="imagemLogo" fitHeight="150.0" fitWidth="150.0" layoutX="116.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="626.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="24.0">
+               <image>
+                  <Image url="@/matsant/res/imgs/adminLogo.png" />
+               </image></ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="260.0" prefHeight="35.0" prefWidth="366.0" text="Faça login ou crie uma nova conta" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Line fx:id="underlineErroLogin" endX="100.0" layoutX="189.0" layoutY="776.0" startX="-100.0" visible="false" AnchorPane.bottomAnchor="23.5" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

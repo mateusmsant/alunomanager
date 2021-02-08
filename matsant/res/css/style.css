@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url("OpenSans-Regular.ttf");
+}
+
+* {
+    -fx-font-family: 'Open Sans';
+}
+
+.label {
+    -fx-prompt-text: #fff;
+    -fx-font-color: #fff;
+}
+
+
+.button {
+    -fx-text-fill: #fff;
+}
+
+#header{
+    -fx-text-fill: #000;
+}
+
+#cadastroHeader {
+    -fx-text-fill: #fff;
+}
+
+#loginHeader {
+    -fx-text-fill: #fff;
+}
+
+#
+#erroLabelLogin {
+    -fx-text-fill: #000;
+}
+
+.jfx-snackbar-content {
+    -fx-background-color: #1e9ee8;
+    -fx-pref-height: 50px;
+    -fx-min-height: 50px;
+    -fx-pref-width: 391.5px;
+    -fx-min-width: 391.5px;
+    -fx-text-fill: #000;
+    -fx-text-color: #000;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: #000;
+    -fx-text-color: #000;
+}

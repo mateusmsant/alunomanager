@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="rootPane" prefHeight="900.0" prefWidth="1280.0" style="-fx-background-color: #f3f3f3;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="matsant.controllers.Alunos">
+   <children>
+      <JFXTreeTableView fx:id="tabelaAlunos" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="1252.0" stylesheets="@../res/css/tableView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TreeTableColumn fx:id="nomeColuna" prefWidth="75.0" text="Nome" />
+            <TreeTableColumn fx:id="emailColuna" prefWidth="75.0" text="Email" />
+            <TreeTableColumn fx:id="addressColuna" prefWidth="75.0" text="Endereço" />
+            <TreeTableColumn fx:id="telefoneColuna" prefWidth="75.0" text="CPF" />
+            <TreeTableColumn fx:id="celularColuna" prefWidth="75.0" text="Celular" />
+            <TreeTableColumn fx:id="nascimentoColuna" prefWidth="75.0" text="Nascimento" />
+            <TreeTableColumn fx:id="aprovadoColuna" prefWidth="75.0" text="Aprovado" />
+         </columns>
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <GridPane layoutX="255.0" layoutY="14.0" prefHeight="86.0" prefWidth="770.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton id="editAlunoButton" onAction="#editAlunoButtonClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #00BA6B;" text="Editar" GridPane.columnIndex="2">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="deleteAlunoButton" onAction="#deleteAlunoButtonClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #ef5350;" text="Deletar" GridPane.columnIndex="1">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" onAction="#addAlunoButtonClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #42a5f5;" text="Adicionar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" onAction="#showMediaAnual" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #ff7043;" text="Calcular média" GridPane.columnIndex="4">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="blackPane" layoutX="74.0" layoutY="-10.0" onMouseClicked="#hideBlackPane" opacity="0.3" prefHeight="1010.0" prefWidth="1280.0" style="-fx-background-color: #000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-110.0" />
+      <AnchorPane fx:id="dialogPane" prefHeight="444.0" prefWidth="677.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <GridPane fx:id="gridAluno" hgap="30.0" layoutX="120.0" layoutY="45.0" prefHeight="307.0" prefWidth="552.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXDatePicker fx:id="nascimentoAluno" defaultColor="#69f0ae" prefHeight="28.0" prefWidth="339.0" promptText="Data de nascimento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="nomeAluno" focusColor="#69f0ae" labelFloat="true" prefHeight="36.0" prefWidth="276.0" promptText="Nome" />
+                  <JFXTextField fx:id="emailAluno" focusColor="#69f0ae" labelFloat="true" prefHeight="36.0" prefWidth="276.0" promptText="Email" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="telefoneAluno" focusColor="#69f0ae" labelFloat="true" prefHeight="36.0" prefWidth="276.0" promptText="CPF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="enderecoAluno" focusColor="#69f0ae" labelFloat="true" prefHeight="36.0" prefWidth="276.0" promptText="Endereço" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="celularAluno" focusColor="#69f0ae" labelFloat="true" prefHeight="29.0" prefWidth="261.0" promptText="Celular" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <JFXButton id="editAlunoButton" layoutX="536.0" layoutY="410.0" onAction="#dialogEditClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #00BA6B;" text="Editar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="deleteAlunoButton" layoutX="120.0" layoutY="410.0" onAction="#dialogClearClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Limpar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" layoutX="328.0" layoutY="410.0" onAction="#dialogAddClicked" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #42a5f5;" text="Adicionar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notaAnualPane" layoutX="10.0" layoutY="10.0" prefHeight="444.0" prefWidth="677.0" style="-fx-background-color: #fff;" visible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton id="deleteAlunoButton" layoutX="166.0" layoutY="429.0" onAction="#limparAnual" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Limpar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" layoutX="467.0" layoutY="429.0" onAction="#calcularAnual" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #42a5f5;" text="Adicionar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="segundoBimestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="165.0" prefHeight="36.0" prefWidth="276.0" promptText="Segundo bimestre" />
+            <JFXTextField fx:id="primeiroBimestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="100.0" prefHeight="36.0" prefWidth="276.0" promptText="Primeiro bimestre" />
+            <JFXTextField fx:id="terceiroBimestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="225.0" prefHeight="36.0" prefWidth="276.0" promptText="Terceiro bimestre" />
+            <JFXTextField fx:id="quartoBimestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="297.0" prefHeight="36.0" prefWidth="276.0" promptText="Quarto bimestre" />
+            <JFXButton id="deleteAlunoButton" layoutX="322.0" layoutY="22.0" onAction="#changeToSemestral" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Semestral">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notaSemestralPane" layoutX="20.0" layoutY="20.0" prefHeight="444.0" prefWidth="677.0" style="-fx-background-color: #fff;" visible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton id="deleteAlunoButton" layoutX="169.0" layoutY="375.0" onAction="#limparSemestral" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Limpar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" layoutX="460.0" layoutY="375.0" onAction="#calcularSemestral" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #42a5f5;" text="Calcular">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="segundoSemestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="214.0" prefHeight="36.0" prefWidth="276.0" promptText="Segundo semestre" />
+            <JFXTextField fx:id="primeiroSemestreInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="149.0" prefHeight="36.0" prefWidth="276.0" promptText="Primeiro semestre" />
+            <JFXButton id="deleteAlunoButton" layoutX="322.0" layoutY="30.0" onAction="#changeParaAnual" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Anual" AnchorPane.bottomAnchor="427.0">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notaFinalPane" layoutX="30.0" layoutY="30.0" prefHeight="444.0" prefWidth="677.0" style="-fx-background-color: #fff;" visible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton id="deleteAlunoButton" layoutX="169.0" layoutY="375.0" onAction="#limparFinal" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #757575;" text="Limpar">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXButton id="addAlunoButton" layoutX="460.0" layoutY="375.0" onAction="#calcularNotaFinal" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #42a5f5;" text="Calcular">
+               <effect>
+                  <DropShadow spread="0.1" />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="notaFinalInput" focusColor="#69f0ae" labelFloat="true" layoutX="252.0" layoutY="177.0" prefHeight="36.0" prefWidth="276.0" promptText="Nota da final" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets top="100.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../res/css/style.css" />
+      <URL value="@../res/css/snackbarAlunos.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,87 @@
+.jfx-snackbar-content {
+    -fx-background-color: #56dc8a;
+}
+.jfx-snackbar-toast{
+    -fx-alignment: center;
+    -fx-text-fill: #f4fffc;
+}
+
+#button{
+    -fx-background-color: #fff;
+    -fx-text-fill: #777e7c;
+    -fx-background-radius: 50px;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 30px;
+}
+
+.tree-table-view{
+    -fx-tree-table-rippler-color : rgba(255, 0, 0, 0.9);
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected {
+    -fx-background-color: #7ad6af;
+    -fx-alignment: center;
+}
+
+.tree-table-view .tree-table-row-cell {
+    -fx-background-color: #f7f7f9;
+    -fx-alignment: center;
+}
+
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+    -fx-text-fill: white;
+}
+
+.tree-table-view .jfx-rippler {
+    -fx-rippler-fill: #8f9691;
+}
+
+.tree-table-view .column-header{
+    -fx-background-color: #e7e7e7;
+    -fx-pref-height: 45px;
+}
+
+.tree-table-view .column-header .label {
+    -fx-font-family: sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill : #9a9a9a;
+    -fx-padding : 10 10 10 10 ;
+}
+
+.tree-table-view .tree-table-cell {
+    -fx-border-width:0 0.2 0 0;
+    -fx-padding: 17 0 12 0;
+    -fx-alignment: center;
+}
+
+.tree-table-view .column-overlay{
+    -fx-background-color: #7299ff;
+}
+
+#addButton{
+    -fx-graphic: url("/sample/src/baseline_add_black_18dp.png");
+}
+
+#deleteButton{
+    -fx-graphic: url("/sample/src/round_delete_black_18dp.png");
+}
+
+#editButton{
+    -fx-graphic: url("/sample/src/baseline_edit_black_18dp.png");
+
+}
+
+#changeStatusButton{
+    -fx-graphic: url("/sample/src/round_autorenew_black_18dp.png");
+
+}
+
+#RenewSubscriptionButton{
+    -fx-graphic: url("/sample/src/round_attach_money_black_18dp.png");
+
+}
+
+#searchButton{
+    -fx-graphic: url("/sample/src/round_search_black_18dp.png");
+
+}
